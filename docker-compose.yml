@@ -1,0 +1,25 @@
+version: "3"
+services:
+  mysqldb:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: livingcode_db
+      MYSQL_USER: livingcode
+      MYSQL_PASSWORD: live123
+    ports:
+      - 3307:3306
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+  server:
+    build: "./"
+    depends_on:
+      - "mysqldb"
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./:/app"
