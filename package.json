@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/diorgeneseugenio/live-coding-node-backend/issues"
   },
-  "homepage": "https://github.com/diorgeneseugenio/live-coding-node-backend#readme"
+  "homepage": "https://github.com/diorgeneseugenio/live-coding-node-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
